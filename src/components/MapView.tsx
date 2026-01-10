@@ -4,6 +4,7 @@ import 'leaflet/dist/leaflet.css';
 import { mockLocations } from '../data/mockLocations';
 import L from 'leaflet';
 import { useUser } from '../context/UserContext';
+import { useToast } from '../context/ToastContext';
 
 // Fix for default marker icon in React Leaflet
 // delete (L.Icon.Default.prototype as any)._getIconUrl;
@@ -17,10 +18,11 @@ const center: [number, number] = [-27.3665, -70.3323];  // Copiapó, Chile
 
 const MapView: React.FC = () => {
     const { recycle } = useUser();
+    const { showToast } = useToast();
 
     const handleConfirm = (locationName: string) => {
         recycle(locationName);
-        alert(`¡Entrega confirmada en ${locationName}!\n\nHas ganado 10 puntos Vizcachi.`);
+        showToast(`¡Entrega confirmada en ${locationName}! (+10 puntos)`, 'success');
     };
 
   return (

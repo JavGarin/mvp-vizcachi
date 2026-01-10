@@ -21,10 +21,13 @@ const Home: React.FC = () => {
                 <span className="text-primary font-semibold text-sm tracking-wide uppercase">MVP 1.0 Disponible</span>
             </div>
             
-            <h1 className="text-5xl md:text-7xl font-bold tracking-tight text-text-primary mb-8 leading-tight">
-                Recicla pilas y baterías, <br className="hidden md:block"/>
-                <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary to-primary-dark">gana puntos</span>
-            </h1>
+            <div className="flex flex-col md:flex-row items-center md:items-end justify-center gap-6 mb-8">
+                <img src="/img/logo.png" alt="Vizcachi Official Logo" className="w-24 md:w-32 h-auto object-contain animate-fade-in-up" />
+                <h1 className="text-5xl md:text-7xl font-bold tracking-tight text-text-primary leading-tight">
+                    Recicla pilas y baterías, <br className="hidden md:block"/>
+                    <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary to-primary-dark">gana puntos</span>
+                </h1>
+            </div>
             
             <p className="text-xl text-text-secondary max-w-2xl mx-auto mb-10 leading-relaxed">
                 Únete a la revolución del reciclaje inteligente. Vizcachi conecta tus residuos con premios reales. 

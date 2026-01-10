@@ -1,6 +1,7 @@
 import React from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import { UserProvider } from './context/UserContext';
+import { ToastProvider } from './context/ToastContext';
 import Home from './pages/Home';
 import MapPage from './pages/Map';
 import Dashboard from './pages/Dashboard';
@@ -14,7 +15,8 @@ import DisclaimerBanner from './components/DisclaimerBanner';
 const App: React.FC = () => {
   return (
     <UserProvider>
-      <Router>
+      <ToastProvider>
+        <Router>
         <div className="min-h-screen bg-background flex flex-col pb-12"> {/* Added padding for banner */}
           <Header />
           <main className="flex-grow">
@@ -34,7 +36,8 @@ const App: React.FC = () => {
           </footer>
           <DisclaimerBanner />
         </div>
-      </Router>
+        </Router>
+      </ToastProvider>
     </UserProvider>
   );
 };

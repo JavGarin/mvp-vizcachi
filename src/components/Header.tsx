@@ -23,8 +23,15 @@ const Header: React.FC = () => {
         <div className="flex justify-between items-center h-16">
           {/* Logo */}
           <div className="flex-shrink-0 flex items-center">
-            <Link to="/" className="text-2xl font-bold text-primary tracking-tight">
-              Vizcachi
+            <Link to="/" className="flex items-center gap-2 group">
+              <img 
+                src="/img/logo.png" 
+                alt="Vizcachi Logo" 
+                className="h-10 w-auto object-contain transition-transform duration-300 group-hover:scale-105"
+              />
+              <span className="text-2xl font-bold text-primary tracking-tight hidden sm:block">
+                Vizcachi
+              </span>
             </Link>
           </div>
 
