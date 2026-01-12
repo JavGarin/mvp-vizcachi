@@ -31,7 +31,7 @@ const App: React.FC = () => {
           {/* Simple Footer */}
           <footer className="bg-surface py-6 border-t border-gray-200 mt-auto">
              <Container>
-                <p className="text-center text-text-secondary text-sm">© 2024 Vizcachi - Reciclaje Inteligente</p>
+                <p className="text-center text-text-secondary text-sm">© 2026 Vizcachi - Reciclaje Inteligente</p>
              </Container>
           </footer>
           <DisclaimerBanner />
